@@ -44,12 +44,9 @@
 [[layers]]
 	name = "colorscheme"
 
-[[layers]]
-  name = "debug"
-
-[[layers]]
-    name = 'lang#go'
-    format_on_save = true
+#[[layers]]
+#    name = 'lang#go'
+#    format_on_save = true
 
 [[layers]]
   name = "format"
