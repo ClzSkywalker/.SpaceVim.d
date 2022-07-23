@@ -15,7 +15,7 @@
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
-    enable_guicolors = false
+    enable_guicolors = true
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
     statusline_separator = "nil"
@@ -27,6 +27,9 @@
     statusline_unicode = false
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
+	  filemanager = 'nerdtree'
+    #bootstrap_before = 'myspacevim#before'
+    #bootstrap_after = 'myspacevim#after'
 	# 文件数位置
 	filetree_direction = "left"
 	# 自动补全插件
@@ -34,6 +37,7 @@
 	# snippet_engine = "coc-snippets"
 	# 取消相对行号
 	relativenumber = false
+	enable_vimfiler_filetypeicon = true
 
 # Enable autocomplete layer
 [[layers]]
@@ -42,14 +46,26 @@
 #auto_completion_tab_key_behavior = "cycle"
 
 [[layers]]
-	name = "colorscheme"
+  name = "colorscheme"
 
-#[[layers]]
-#    name = 'lang#go'
-#    format_on_save = true
+# 图标
+[[custom_plugins]]
+repo="ryanoasis/vim-devicons"
+
+[[custom_plugins]]
+repo="kristijanhusak/defx-icons"
+
+[[layers]]
+    name = 'lang#go'
+    format_on_save = true
+
+[[layers]]
+    name = 'lang#lua'
+    format_on_save = true
 
 [[layers]]
   name = "format"
+  format_on_save = true
 
 [[layers]]
 	name = 'shell'
@@ -60,3 +76,19 @@
 [[layers]]
   name = "debug"
   debugger_plugin = "vimspector"
+  
+[[custom_plugins]]
+  repo="kdheepak/lazygit.nvim"
+
+# 查询
+[[layers]]
+  name = "telescope"
+  
+  
+  
+# md
+[[layers]]
+    name = 'lang#markdown'
+    enableWcwidth = 1
+    listItemIndent = 1
+    enabled_formater = ['prettier']
