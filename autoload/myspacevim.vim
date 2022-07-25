@@ -20,9 +20,8 @@ function! myspacevim#before() abort
     " let g:go_gopls_options=['-remote=auto','-ignore-case']
     call SpaceVim#custom#SPC('nmap',['a','g'],':LazyGit','LazyGit',1)
     call SpaceVim#custom#SPC('nnoremap', ['f', 't'], 'echom "hello world"', 'test custom SPC', 1)
+
 endfunction
-
-
 function! myspacevim#after() abort
     lua << EOF
     local golang_setup = {
@@ -42,3 +41,6 @@ function! myspacevim#after() abort
 EOF
     call iceberg#palette#dark#create()
 endfunction
+
+
+" let g:go_gopls_gofumpt = v:true

@@ -8,87 +8,91 @@
 
 # All SpaceVim option below [option] section
 [options]
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer
-    colorscheme = "onedark"
-    colorscheme_bg = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
-    enable_guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
-    statusline_separator = "nil"
-    statusline_iseparator = "bar"
-    buffer_index_type = 4
-    windows_index_type = 3
-    enable_tabline_filetype_icon = true
-    enable_statusline_mode = true
-    statusline_unicode = false
-    # Enable vim compatible mode, avoid changing origin vim key bindings
-    vimcompatible = true
-	  filemanager = 'nerdtree'
-    #bootstrap_before = 'myspacevim#before'
-    #bootstrap_after = 'myspacevim#after'
-	# 文件数位置
-	filetree_direction = "left"
-	# 自动补全插件
-	autocomplete_method = "coc"
-	# snippet_engine = "coc-snippets"
-	# 取消相对行号
-	relativenumber = false
-	enable_vimfiler_filetypeicon = true
+# set spacevim theme. by default colorscheme layer is not loaded,
+# if you want to use more colorscheme, please load the colorscheme
+# layer
+colorscheme = "onedark"
+colorscheme_bg = "dark"
+# Disable guicolors in basic mode, many terminal do not support 24bit
+# true colors
+enable_guicolors = true
+# Disable statusline separator, if you want to use other value, please
+# install nerd fonts
+statusline_separator = "nil"
+statusline_iseparator = "bar"
+buffer_index_type = 4
+windows_index_type = 3
+enable_tabline_filetype_icon = true
+enable_statusline_mode = true
+statusline_unicode = false
+# Enable vim compatible mode, avoid changing origin vim key bindings
+vimcompatible = true
+filemanager = 'nerdtree'
+# 文件数位置
+filetree_direction = "left"
+# 自动补全插件
+autocomplete_method = "coc"
+# snippet_engine = "coc-snippets"
+# 取消相对行号
+relativenumber = false
+enable_vimfiler_filetypeicon = true
+#bootstrap_before = "myspacevim#before"
+#bootstrap_after = 'myspacevim#after'
 
 # Enable autocomplete layer
 [[layers]]
-	name = 'autocomplete'
+name = 'autocomplete'
 #auto_completion_return_key_behavior = "complete"
 #auto_completion_tab_key_behavior = "cycle"
 
 [[layers]]
-  name = "colorscheme"
+name = "colorscheme"
 
-# 图标
-[[custom_plugins]]
-repo="ryanoasis/vim-devicons"
-
-[[custom_plugins]]
-repo="kristijanhusak/defx-icons"
-
-[[layers]]
-    name = 'lang#go'
-    format_on_save = true
-
-[[layers]]
-    name = 'lang#lua'
-    format_on_save = true
-
-[[layers]]
-  name = "format"
-  format_on_save = true
-
-[[layers]]
-	name = 'shell'
-	default_position = 'top'
-	default_height = 30
-
-# debug
-[[layers]]
-  name = "debug"
-  debugger_plugin = "vimspector"
-  
-[[custom_plugins]]
-  repo="kdheepak/lazygit.nvim"
+# 搜索文件/函数
+#[[layers]]
+#name = "leaderf"
 
 # 查询
 [[layers]]
-  name = "telescope"
-  
-  
-  
+name = "telescope"
+
+[[layers]]
+name = 'lang#go'
+format_on_save = true
+
+[[layers]]
+name = 'lang#lua'
+format_on_save = true
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+
 # md
 [[layers]]
-    name = 'lang#markdown'
-    enableWcwidth = 1
-    listItemIndent = 1
-    enabled_formater = ['prettier']
+name = 'lang#markdown'
+enableWcwidth = 1
+listItemIndent = 1
+enabled_formater = ['prettier']
+
+[[layers]]
+name = "format"
+format_on_save = true
+default_height = 30
+
+# debug
+[[layers]]
+name = "debug"
+debugger_plugin = "vimspector"
+
+# 图标
+[[custom_plugins]]
+repo = "ryanoasis/vim-devicons"
+
+# 图标
+[[custom_plugins]]
+repo = "kristijanhusak/defx-icons"
+
+
+[[custom_plugins]]
+repo = "kdheepak/lazygit.nvim"
